@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="bg-dark text-light text-center shadow">
+    <div class="container p-5 bg-dark">
+        <div class="row">
+            <div class="d-md-flex bg-dark align-items-center justify-content-evenly">
+                <h1 class="col text-center"><br>Your Backlog</h1>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="bg-light text-center">
+    <div class="container p-5">
+        <div class="row">
+            <div class="align-items-center justify-content-center">
+                <div class="if-logged-in">
+                    Hello, DisplayName. Would you like to play a game?
+                    And then mark that game off from your backlog so you can
+                    finally finish all those games you keep putting off,
+                    instead of just buying more and more games because they were
+                    'on a great sale', or because you told yourself you'd definitely
+                    play it next, even though that was 15 years ago?
+                </div>
+                <div class="if-not-logged-in">
+                    Welcome. Sign in (or up) and start tracking your backlog!
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

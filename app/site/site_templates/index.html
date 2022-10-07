@@ -14,17 +14,20 @@
     <div class="container p-5">
         <div class="row">
             <div class="align-items-center justify-content-center">
+                {% if current_user.is_authenticated %}
                 <div class="if-logged-in">
-                    Hello, DisplayName. Would you like to play a game?
+                    Hello. Would you like to play a game?
                     And then mark that game off from your backlog so you can
                     finally finish all those games you keep putting off,
                     instead of just buying more and more games because they were
                     'on a great sale', or because you told yourself you'd definitely
                     play it next, even though that was 15 years ago?
                 </div>
+                {% else %}
                 <div class="if-not-logged-in">
                     Welcome. Sign in (or up) and start tracking your backlog!
                 </div>
+                {% endif %}
             </div>
         </div>
     </div>

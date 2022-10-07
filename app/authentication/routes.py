@@ -49,3 +49,8 @@ def signin():
     except:
         raise Exception('Invalid form data: Please check your form')
     return render_template('sign_in.html', form=form)
+
+@auth.route('/logout')
+def logout():
+    logout_user()
+    return redirect(url_for('site.home'))
